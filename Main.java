@@ -29,7 +29,7 @@ class Main {
                     Program_2.start();
                     break;
                 case "3":
-
+                    Program_3.start();
                     break;
             }
 
@@ -110,6 +110,28 @@ class Program_2 {
         }
 
         System.out.println("Программа 2 завершена");
+
+    }
+
+}
+
+class Program_3 {
+
+    public static void start() {
+
+        System.out.println("Программа 3 запущена");
+
+        int[] array = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+        System.out.println(
+                "Задан массив целых чисел: { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 } - необходимо вывести все чётные числа");
+        System.out.print("Вывод:  ");
+        for (int value : array) {
+            if (value % 2 == 0) {
+                System.out.print(value + "  ");
+            }
+        }
+
+        System.out.println("\nПрограмма 3 завершена");
 
     }
 
