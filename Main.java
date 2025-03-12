@@ -13,23 +13,28 @@ class Main {
                     System.out.println("Ошибка в номере программы");
                 }
 
-                System.out.print("Введите номер программы (1, 2 или 3): ");
+                System.out.print("Введите номер программы (1, 2 или 3) или 0 для выхода: ");
 
                 selectedProgram = in.next();
             } while (!selectedProgram.equals("1") &&
                     !selectedProgram.equals("2") &&
-                    !selectedProgram.equals("3"));
+                    !selectedProgram.equals("3") &&
+                    !selectedProgram.equals("0"));
 
             switch (selectedProgram) {
                 case "1":
                     Program_1.start();
                     break;
                 case "2":
-
+                    Program_2.start();
                     break;
                 case "3":
 
                     break;
+            }
+
+            if (selectedProgram.equals("0")) {
+                break;
             }
         }
 
@@ -78,6 +83,33 @@ class Program_1 {
         System.out.println("a * b = " + (a * b));
 
         System.out.println("Программа 1 завершена");
+
+    }
+
+}
+
+class Program_2 {
+
+    public static void start() {
+
+        System.out.println("Программа 2 запущена");
+
+        String a, b;
+        Scanner in = new Scanner(System.in);
+
+        System.out.print("Введите строку a: ");
+        a = in.nextLine();
+
+        System.out.print("Введите строку b: ");
+        b = in.nextLine();
+
+        if (a.equals(b)) {
+            System.out.println("Строки идентичны");
+        } else {
+            System.out.println("Строки неидентичны");
+        }
+
+        System.out.println("Программа 2 завершена");
 
     }
 
